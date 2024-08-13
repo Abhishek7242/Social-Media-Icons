@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #ebeef1;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.follow-us-container {
+    color: white;
+    position: relative;
+    width: 100%;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #ebeef1;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.follow-us-container h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #000;
+    cursor: default;
+    margin-bottom: 20px;
+}
+
+.icons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    cursor: pointer;
+    background-color: #ebeef1;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+                -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+    position: relative;
+}
+
+.social-icon:hover {
+    transform: scale(0.9);
+    box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+                inset -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.social-icon svg {
+    height: 30px;
+    width: 30px;
+    transition: 0.3s;
+}
+
+.social-icon::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 3px;
+    content: '';
+    padding: 5px 10px;
+    background: black;
+    transition: 0.2s;
+    user-select: none;
+    pointer-events: none;
+    color: white;
+    opacity: 0;
+}
+
+.social-icon:hover::before {
+    top: -50px;
+    opacity: 1;
+}
+
+.social-icon.facebook {
+    fill: rgb(0, 42, 255);
+}
+.social-icon.facebook::before {
+    content: 'Facebook';
+}
+.social-icon.youtube {
+    fill: rgb(240, 0, 0);
+}
+.social-icon.youtube::before {
+    content: 'YouTube';
+}
+.social-icon.insta {
+    fill: rgb(240, 0, 228);
+}
+
+.social-icon.insta::before {
+    content: 'Instagram';
+}
+
+.social-icon.twitter {
+    /* fill: rgb(29, 161, 242); */
+     /* Twitter blue color */
+}
+
+.social-icon.twitter::before {
+    content: 'Twitter';
+}
